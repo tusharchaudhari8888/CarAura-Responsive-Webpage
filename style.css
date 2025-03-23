@@ -1,0 +1,192 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url("vacant-warehouse-space.jpg");
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header {
+  background: #0041f3;
+  padding: 15px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+
+.logo {
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.navcontent {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.navcontent li {
+  display: inline;
+  transition-property: all;
+  transition-duration: 5ms;
+  transition-timing-function: ease-in;
+  transition-delay: 1s;
+}
+
+.navcontent  a:hover{
+  background-color:aliceblue;
+  color: #0041f3;
+}
+
+.navcontent a {
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+}
+
+.searchbar {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.searchbar input {
+  width: 40%;
+  height: 25px;
+  border: #0041f3;
+  border-radius: 20px;
+}
+
+.searchbar button {
+  width: 100px;
+  height: 25px;
+  border: #0041f3;
+  border-radius: 20px;
+  transition: all 2ms ease-out 2ms;
+}
+
+.searchbar button:active{
+  width: 110px;
+  height: 30px;
+  background-color: aliceblue;
+  color:#0041f3;
+}
+
+.welcome {
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.cars {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+  grid-gap: 20px;
+  grid-auto-rows: minmax(500px, auto);
+  grid-auto-columns: minmax(30%, auto);
+  padding: 0;
+  margin: 20px;
+}
+
+.car:hover{
+  background-color: rgb(201, 201, 201);
+  border: solid 2px rgb(201, 201, 201);
+}
+
+.car:active{
+  background-color: aliceblue;
+}
+
+.car {
+  background-color: white;
+  border: solid 2px whitesmoke;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: left;
+}
+
+.car h2{
+  height: 65px;
+}
+.car img {
+  width: 100%;
+  height: 50%;
+}
+
+.car a {
+  text-decoration: none;
+  color:black
+}
+
+.car a:active{
+  background-color: white;
+}
+
+.car button {
+  display: block;
+  border-style: none;
+  margin-bottom: 10px;
+  height: 30px;
+  width: 50%;
+}
+
+.car button:active{
+  background-color: white;
+}
+
+#more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  background-color: #0041f3;
+  color: white;
+  margin-top: 20px;
+  padding: 10px;
+  border-top: 1px solid #444;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 700px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .searchbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navcontent {
+    flex-direction: column;
+    padding: 0px;
+  }
+
+  .navcontent li {
+    margin: 5px;
+  }
+
+  .cars {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
+    grid-gap: 20px;
+    grid-auto-rows: minmax(500px, auto);
+    grid-auto-columns: minmax(30%, auto);
+    padding: 0;
+    margin: 20px;
+  }
+}
